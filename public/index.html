@@ -1,9 +1,245 @@
 <!doctype html>
 <head>
-    <title> Icons </title>
+    <title> Home </title>
+    <style>
+        .row{
+            width:720px;
+            margin: 10px auto 10px auto ;
+        }
+        .image-container {
+            display: table-cell;
+            vertical-align: middle;
+            padding:20px;
+        }
+    </style>
 </head>
 
-<body>
-   <canvas id="cnv_element"></canvas>
-   <script src="script.js"></script>
-</body>
+    <body>
+
+        <div class="row">
+            <div class="image-container">
+                <img id="cook_id" src="Finalicons/Cook1.png" height="200" width="200"/>
+            </div>
+            
+            <div class="image-container">
+                <img id="chat_id" src="Finalicons/Chat1.png" height="200" width="200"
+                    onmouseover= "this.src='Finalicons/Chat2.png';"
+                    onmouseout= "this.src='Finalicons/Chat1.png';"                     
+                />
+            </div>
+            
+            <div class="image-container">
+                <img id="home_id" src="Finalicons/Home01.png" height="200" width="200"
+                    onmousedown= "this.src='Finalicons/Home02.png';"
+                    onmouseup= "this.src='Finalicons/Home01.png';"
+                />
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="image-container">
+                <img id="locate_id" src="Finalicons/Locate1.png" height="200" width="200"/>
+            </div>
+            
+            <div class="image-container">
+                <img id="member_id" src="Finalicons/Member1.png" height="200" width="200"
+                    onmouseover= "this.src='Finalicons/Member2.png';"
+                    onmouseout= "this.src='Finalicons/Member1.png';"                     
+                />
+            </div>
+            
+            <div class="image-container">
+                <img id="reward_id" src="Finalicons/Rewards1.png" height="200" width="200"
+                    onmousedown= "this.src='Finalicons/Rewards2.png';"
+                    onmouseup= "this.src='Finalicons/Rewards1.png';"
+                />
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="image-container">
+                <img id="calendar_id" src="Finalicons/Calendar1.png" height="200" width="200"
+                    onmouseover= "this.src='Finalicons/Calendar2.png';"
+                    onmouseout= "this.src='Finalicons/Calendar1.png';"
+                />
+            </div>
+            
+            <div class="image-container">
+                <img id="tobuy_id" src="Finalicons/Tobuy1.png" height="200" width="200"
+                    onmouseover= "this.src='Finalicons/Tobuy2.png';"
+                    onmouseout= "this.src='Finalicons/Tobuy1.png';"                     
+                />
+            </div>
+            
+            <div class="image-container">
+                <img id="todo_id" src="Finalicons/Todo1.png" height="200" width="200"
+                    onmousedown= "this.src='Finalicons/Todo2.png';"
+                    onmouseup= "this.src='Finalicons/Todo1.png';"
+                />
+            </div>
+        </div>
+        
+    </body>
+
+    <script>
+        // const shopping_variable = document.getElementById ('shopping')
+        // const shopping_audio = new Audio ('img/Coin 2_01.mp3')
+        // shopping_variable.onpointerdown = () => {
+        //     console.log ('click')
+        //     console.dir (shopping_audio)
+        //     shopping_audio.play()
+        // }
+
+        const cook = document.getElementById ('cook_id')
+        const Cook_audio = new Audio ('img/Cook_01.mp3')
+        cook.onpointerdown = () => {
+            console.log ('click')
+            Cook_audio.play()
+        }
+
+        cook.onpointerover = () => {
+            console.log (`pointer over`)
+            cook.src = 'Finalicons/Cook2.png'
+        }
+
+        cook.onpointerout = () => {
+            cook.src = 'Finalicons/Cook1.png'
+        }
+        
+        const locate = document.getElementById ('locate_id')
+        const locate_audio = new Audio ('img/Locatorsound.mp3')
+        locate.onpointerdown = () => {
+            console.log ('click')
+            console.dir (locate_audio)
+            locate_audio.play()
+        }
+
+        locate.onpointerover = () => {
+            console.log (`pointer over`)
+            locate.src = 'Finalicons/Locate2.png'
+        }
+        
+        locate.onpointerout = () => {
+            locate.src = 'Finalicons/Locate1.png'
+        }
+        
+        const reward = document.getElementById ('reward_id')
+        const reward_audio = new Audio ('img/Rewards.mp3')
+        reward.onpointerdown = () => {
+            console.log ('click')
+            console.dir (reward_audio)
+            reward_audio.play()
+        }
+
+        reward.onpointerover = () => {
+            console.log (`pointer over`)
+            reward.src = 'Finalicons/Rewards2.png'
+        }
+        
+        reward.onpointerout = () => {
+            reward.src = 'Finalicons/Rewards1.png'
+        }
+
+        const tobuy = document.getElementById ('tobuy_id')
+        const tobuy_audio = new Audio ('/img/Coin2_01.mp3')
+        tobuy.onpointerdown = () => {
+            console.log ('click')
+            console.dir (tobuy_audio)
+            tobuy_audio.play()
+        }
+
+        tobuy.onpointerover = () => {
+            console.log (`pointer over`)
+            tobuy.src = 'Finalicons/Tobuy2.png'
+        }
+        
+        tobuy.onpointerout = () => {
+            tobuy.src = 'Finalicons/Tobuy1.png'
+        }
+
+        const todo = document.getElementById ('todo_id')
+        const todo_audio = new Audio ('img/test.mp3')
+        todo.onpointerdown = () => {
+            console.log ('click')
+            console.dir (todo_audio)
+            todo_audio.play()
+        }
+        
+        todo.onpointerover = () => {
+            console.log (`pointer over`)
+            todo.src = 'Finalicons/Todo2.png'
+        }
+        
+        todo.onpointerout = () => {
+            todo.src = 'Finalicons/Todo1.png'
+        }
+
+        const home = document.getElementById ('home_id')
+        const home_audio = new Audio ('img/open_01.mp3')
+        home.onpointerdown = () => {
+            console.log ('click')
+            console.dir (home_audio)
+            home_audio.play()
+        }
+
+        home.onpointerover = () => {
+            console.log (`pointer over`)
+            home.src = 'Finalicons/Home02.png'
+        }
+        
+        home.onpointerout = () => {
+            home.src = 'Finalicons/Home01.png'
+        }
+
+        const calendar = document.getElementById ('calendar_id')
+        const calendar_audio = new Audio ('img/calendar_01.mp3')
+        calendar.onpointerdown = () => {
+            console.log ('click')
+            console.dir (calendar_audio)
+            calendar_audio.play()
+        }
+
+        calendar.onpointerover = () => {
+            console.log (`pointer over`)
+            calendar.src = 'Finalicons/Calendar2.png'
+        }
+        
+        calendar.onpointerout = () => {
+            calendar.src = 'Finalicons/Calendar1.png'
+        }
+
+        const member = document.getElementById ('member_id')
+        const Member_audio = new Audio ('img/Clap2.mp3')
+        member.onpointerdown = () => {
+            console.log ('click')
+            console.dir (Member_audio)
+            Member_audio.play()
+        }
+
+        member.onpointerover = () => {
+            console.log (`pointer over`)
+            member.src = 'Finalicons/Member2.png'
+        }
+        
+        member.onpointerout = () => {
+            member.src = 'Finalicons/Member1.png'
+        }
+
+        const chat = document.getElementById ('chat_id')
+        const chat_audio = new Audio ('img/Ballbouncing480003_01.mp3')
+        chat.onpointerdown = () => {
+            console.log ('click')
+            console.dir (chat_audio)
+            chat_audio.play()
+        }
+
+        chat.onpointerover = () => {
+            console.log (`pointer over`)
+            chat.src = 'Finalicons/Chat2.png'
+        }
+        
+        chat.onpointerout = () => {
+            chat.src = 'Finalicons/Chat1.png'
+        }
+    </script>
+    
